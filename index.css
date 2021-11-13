@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: oxygen;
+    box-sizing: border-box;    
+}
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+/*Topo*/
+.topo .logo {
+    padding: 1.5em;
+}
+.logo img {
+    max-width: 40em;
+}
+.topo {
+    text-align: center;
+}
+.menu ul li {
+    padding: .8em;
+}
+.menu a {
+    font-size: 1.8em;
+    padding: .5em;
+    color: white;
+    font-weight: 700;
+    text-transform: capitalize;
+    display: inline-block;
+}
+.menu ul li:hover {
+    background-color: rgb(179, 137, 218);
+}
+.menu {
+    background-color: blueviolet;
+}
+
+/*main*/
+
+main{
+    padding-top: 5em;
+    background-color: rgb(247, 247, 247);    
+}
+.intro_texto {
+    text-align: center;
+    font-size: 1em;    
+    padding: 1em;
+    color: rgb(99, 38, 180);
+}
+.intro_texto p {
+    margin-top: 2em;
+    line-height: 1.8;
+}
+.intro .botao {
+    text-align: center;
+}
+
+.botao a{
+    display: inline-block;
+    padding: .7em 1.5em;
+    border-radius: .3em;
+    background-color: rgb(5, 196, 202);
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.botao a:hover{
+    background-color: rgb(130, 195, 197);
+}
+
+/*sessao um do site*/
+
+.sessaoUm {
+    text-align: center;
+    padding: 4em 0 4em 0;
+}
+.gridUm h3, .gridDois h3 {
+    color: rgb(99, 38, 180);
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-weight: 600;
+    padding: 2em;
+}
+.gridUm, .gridDois {
+    padding: 2em 0 2em 0;
+}
+.gridUm p, .gridDois p {
+    line-height: 1.8;
+    padding: 2em;
+    font-size: 1.2em;
+}
+
+
+/*sessao dois do site*/
+
+.sessaoDois {
+    background-color: white;
+}
+.sessaoDois .botao {
+    padding: 2em;
+}
+
+.logoRodape {
+    background-color: rgb(82, 82, 82);
+    padding: .5em;
+    font-size: 1.5em;
+   
+}
+.textoRodape {
+    padding: 1em;
+    color: white;
+}
+.textoRodape h3, .textoRodape p {
+    margin: 1em;
+}
+
+.rodape{
+    background-color: rgb(37, 37, 37);    
+    text-align: center;
+}
+
+.gridUm span {
+    color: rgb(99, 38, 180);
+    font-size: 4em;
+}
+
+@media (min-width: 768px) {
+    .topo {
+        display: flex;
+        justify-content: space-around;
+        place-items: center;
+    }
+    .menu {
+        background-color: transparent;
+    }
+    .menu a {
+        font-size: 1.2em;
+        padding: .5em;
+        color: blueviolet;
+    }
+    .menu a:hover {
+       color: rgb(179, 137, 218);
+    }
+    .menu ul li {
+        display: inline-block; 
+        padding: 0;       
+    }
+    .menu ul li:hover {
+        background-color: transparent;        
+    }
+    main{
+        padding-top: 0;    
+    }
+    .intro {
+        background-image: linear-gradient(45deg, rgba(137, 43, 226, 0.452) 100%, rgba(255, 255, 255, 0.459)), url(images/mountain640.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60vh;
+        height: 25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 6em;
+    }
+    .intro_texto {
+        color: white;
+        font-size: 1.2em;
+        font-weight: bold;
+    }    
+
+    .sessaoUm {
+        display: grid;
+        grid-template-areas:
+        'areaUm areaDois'
+        'areaTres areaQuatro' ;
+    } 
+    .gridUm, .gridDois {
+        padding: 0;
+    }
+    .gridUm p, .gridDois p {
+        padding: 1em;
+        font-size: 1.2em;        
+    }
+}
+@media (min-width: 1280px) {
+   .intro {
+       background-image: linear-gradient(45deg, rgba(137, 43, 226, 0.452) 100%, rgba(255, 255, 255, 0.459)), url(images/mountain_1920.jpg);
+       height: 60vh;
+   }
+   .sessaoDois {
+    display: grid;
+    grid-template-areas:
+    'gDoisAreaUm gDoisAreaDois'
+    'gDoisAreaTres gdoisAreaQuatro' ;
+    }    
+   
+}
+
+@media (min-width: 1320px) {
+    .sessaoUm {    
+        grid-template-areas:
+        'areaUm areaDois areaTres areaQuatro';
+    } 
+}
